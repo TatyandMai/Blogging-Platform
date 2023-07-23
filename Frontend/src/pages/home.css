@@ -1,0 +1,149 @@
+/* Estilos para el cuerpo de la página */
+body {
+  background-color: white;
+  background-image: none;
+  min-width: 100vw;
+}
+
+.first-container {
+  background-color: #DEE4DA;
+  background-image: url(../assets/leaves-bottom.png), url(../assets/leaves-top.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position: right bottom, left top;
+  background-size: 40% auto, 40% auto; /* Color de fondo del body */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Altura completa de la ventana */
+  min-width: 100vw;
+  margin: 10px 0;
+
+}
+
+/* Estilos para el encabezado (header) */
+.header {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  margin: 40px 40px 0px 0px;
+}
+
+/* Estilos para los botones */
+.buttons {
+  display: flex;
+}
+
+/* Estilos para los botones */
+.signup-button, .login-button, .latestArticle-button {
+  background-color: transparent; /* Fondo transparente */
+  color: black; /* Texto en color negro */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  font-family: 'NombreDeTuTipografia', sans-serif; /* Utiliza la tipografía definida */
+  font-size: 16px; /* Tamaño de la fuente */
+  font-weight: bold; /* Negrita */
+  text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+/* Estilos para el logo */
+.logo {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.second-container {
+  background-color: #E1E6E0;
+  min-height: 100vh;
+  min-width: 100vw;
+  padding: 5%;
+  text-align: center;
+}
+
+.latest-articles h1 {
+  padding-top: 200px;
+}
+
+.third-container {
+  background-color: white;
+  max-height: 100vh;
+  max-width: 100vw;
+  display: flex;
+  align-items: center;
+}
+
+.about-left {
+  max-width: 50vw;
+  max-height: 100vh;
+}
+
+.about-left img {
+  width: 50vw;
+  max-height: 100vh;
+  align-items: center;
+}
+
+.about-right {
+  max-width: 50vw;
+  max-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  vertical-align: middle;
+}
+
+.about-right h1 {
+  text-align: center;
+}
+
+.about-right h5 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.last-container {
+  max-height: 100vh;
+  min-width: 100vw;
+}
+
+.subscription {
+  background-color: #E1E6E0;
+  min-width: 100vw;
+  min-height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.subscription input {
+  min-width: 40vw;
+  min-height: 5vh;
+  margin-bottom: 2vh;
+}
+
+.subscription button {
+  background-color: #3c6503;
+  min-width: 20vw;
+}
+
+.subscription button:hover {
+  background-color:#849d42;
+}
+
+.footer {
+  background-color: white;
+  min-width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  min-height: 5vh;
+}
+
+.signup-link, .login-link, .latestArticle-link {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
