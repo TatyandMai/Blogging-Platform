@@ -30,9 +30,9 @@ function Register() {
                 placeholder="Confirm Password"
                 name="confirmPassword"
             />
-            <button type="submit">Create User</button>
+            <button className='registerButton' type="submit">Create User</button>
             <span>
-                Already have an account? <Link to="/login"> Login</Link>
+                Already have an account? <Link className='link' to="/login"> Login</Link>
             </span>
         </form>
     </container>

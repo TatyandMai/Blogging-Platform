@@ -48,7 +48,7 @@ form input:focus {
     outline: none;
 }
 
-button {
+.registerButton {
     background-color: #3c6503;
     padding: 1rem 2rem;
     border: none;
@@ -67,12 +67,19 @@ button:hover {
 
 span {
     color: black;
+    text-align: center;
 }
 
-a {
+.link {
     color: red;
     text-decoration: none;
     font-weight: bold;
+}
+
+@media screen and (max-width:414px){
+    form {
+        gap: 1rem;
+    }
 }
 
 
