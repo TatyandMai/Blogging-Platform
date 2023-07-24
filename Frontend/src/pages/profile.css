@@ -29,6 +29,7 @@
 }
 
 .profileName {
+    font-weight: bold;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -85,3 +86,63 @@
     height: 60px;
     border-radius: 50%;
 }
+
+@media screen and (max-width:414px){
+    .profileTop {
+        height: 300px;
+    }
+
+    .profileBackImg {
+        height: 240px;
+    }
+
+    .profileImg {
+        width: 100px;
+        height: 100px;
+        top: 190px;
+    }
+
+    .profileName h2 {
+        margin-top: 0px;
+    }
+
+    .profileName h2 {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .profileBottom {
+        padding-top: 40px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bottomRight {
+        max-width: 100vw;
+    }
+
+    .bottomLeft {
+        padding-bottom: 50px;
+        max-width: 100vw;
+    }
+
+    .userInfo h3 {
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+    .friendsTitle h2, .userTitle h2{
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .friends h4 {
+        font-size: 12px;
+    }
+
+    .friendsImg {
+        width: 40px;
+        height: 40px;
+    }
+}
+

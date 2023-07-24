@@ -20,12 +20,12 @@ return (
                 placeholder="Password"
                 name="password"
             />
-            <button type="submit">Login</button>
+            <button className='loginButton' type="submit">Login</button>
             <span>
-                Don't have an account? <Link to="/register"> Register</Link>
+                Don't have an account? <Link className="link" to="/register"> Register</Link>
             </span>
         </form>
-  
+
     </container>
     </>
   );

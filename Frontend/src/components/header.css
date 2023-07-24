@@ -72,3 +72,9 @@
     cursor: pointer;
     position: relative;
 }
+
+@media screen and (max-width:414px){
+    .headerContainer {
+        flex-direction: column;
+    }
+}
