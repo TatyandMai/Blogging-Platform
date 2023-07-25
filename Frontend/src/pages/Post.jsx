@@ -1,31 +1,67 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './post.css';
 
 function Post() {
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  const [posts, setPosts] = useState([]);
+  const user = JSON.parse(localStorage.getItem('bloggingPlatform-user')); // Get user info from local storage
+
+  const handlePostSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      const response = await fetch('/api/posts', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          userId: user._id, // Use the user ID from local storage
+          title,
+          description,
+        }),
+      });
+
+      if (response.ok) {
+        const newPost = await response.json();
+        setPosts((prevPosts) => [...prevPosts, newPost]);
+      } else {
+        console.error('Error creating post');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+
+  // ...
+
   return (
     <div className="post">
       <div className="container">
+        {/* ... */}
         <div className="user-profile">
-          {/* Here you can put the image of the user */}
-          <img src="person 9.png" alt="User Profile" />
+          {/* Display the user's profile image from the user info */}
+          <img src={user.profileImage} alt="User Profile" />
         </div>
         <div className="post-box">
-          <input type="text" placeholder="Post title" />
-          <textarea placeholder="Write your post here"></textarea>
-          <div className="upload-buttons">
-            <label htmlFor="photo-upload">Add photo</label>
-            <input type="file" id="photo-upload" accept="image/*" />
-            <label htmlFor="video-upload">Add video</label>
-            <input type="file" id="video-upload" accept="video/*" />
-          </div>
-          <button className="post-button">POST</button>
+          {/* ... */}
+          <button className="post-button" onClick={handlePostSubmit}>
+            POST
+          </button>
         </div>
         <div className="comments-section">
-          {/*Comments will be displayed here */}
+          {/* Display all posts */}
+          {posts.map((post) => (
+            <div key={post._id}>
+              <h2>{post.title}</h2>
+              <p>{post.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default Post;
