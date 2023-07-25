@@ -18,64 +18,15 @@ body {
   min-width: 100vw;
 }
 
-.register-container{
-  background-color:#bfcdbb;
-  height: 60vh;
-  width: 50vh;
-  border-radius: 5%;
+.header {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  margin: 40px 40px 0px 0px;
+}
+
+.buttons {
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.register-form {
-  display: flex ;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.register h1 {
-  padding-bottom: 0;
-  font-weight: bold;
-  text-align: center;
-}
-
-.register-input {
-    padding: 0.8rem;
-    border:0.1rem solid #EFF4EE;
-    border-radius: 0.4rem;
-    font-size: 1rem;
-    width: 100%;
-}
-
-.registerButton {
-  background-color: #3c6503;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: 0.5s ease-in-out;
-  color: white;
-}
-
-button:hover {
-  background-color:#849d42;
-}
-
-.register-span {
-  text-align: center;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.register-link {
-  color: red;
-  text-decoration: none;
-  font-weight: bold;
 }
 
 .second-container {
