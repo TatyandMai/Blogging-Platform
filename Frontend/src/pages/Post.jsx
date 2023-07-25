@@ -6,22 +6,22 @@ function Post() {
     <div className="post">
       <div className="container">
         <div className="user-profile">
-          {/* Aquí puedes poner la imagen del usuario */}
+          {/* Here you can put the image of the user */}
           <img src="person 9.png" alt="User Profile" />
         </div>
         <div className="post-box">
-          <input type="text" placeholder="Título del post" />
-          <textarea placeholder="Escribe tu post aquí"></textarea>
+          <input type="text" placeholder="Post title" />
+          <textarea placeholder="Write your post here"></textarea>
           <div className="upload-buttons">
-            <label htmlFor="photo-upload">Agregar foto</label>
+            <label htmlFor="photo-upload">Add photo</label>
             <input type="file" id="photo-upload" accept="image/*" />
-            <label htmlFor="video-upload">Agregar video</label>
+            <label htmlFor="video-upload">Add video</label>
             <input type="file" id="video-upload" accept="video/*" />
           </div>
           <button className="post-button">POST</button>
         </div>
         <div className="comments-section">
-          {/* Aquí se mostrarán los comentarios */}
+          {/*Comments will be displayed here */}
         </div>
       </div>
     </div>
