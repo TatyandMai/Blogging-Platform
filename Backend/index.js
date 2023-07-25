@@ -1,18 +1,19 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+const bodyParser = require('body-parser');
 
 const app = express();
 
 require("dotenv").config();
 
-const auth = require("./Routes/auth");
-const users = require("./Routes/users");
-const posts = require("./Routes/posts");
+const authRoute = require("./Routes/authRoutes");
 
-app.use("/api/auth", auth); // route to login, register
-app.use("/api/users", users); //route to users
-app.use("/api/posts", posts); //route to posts
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use("/api/auth", authRoute); // route to login, register
+
 
 
 //connect to MongoDB
@@ -26,4 +27,4 @@ mongoose.connect(process.env.MONGO_URL, {
 });
 
 
-app.listen(3000, () => {console.log("Server is running");});
+app.listen(6000, () => {console.log("Server is running");});

@@ -1,4 +1,4 @@
- .login-container {
+body {
     min-height: 100vh;
     min-width: 100vw;
     display: flex;
@@ -13,36 +13,31 @@
     align-items: center;
 }
 
-.login {
+.register-container{
+    background-color:#bfcdbb;
+    height: 60vh;
+    width: 50vh;
+    border-radius: 5%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
-.login-container {
-    max-width: 80vw;
-    display: flex;
+.register-form {
+    display: flex ;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
-.login h1 {
+.register h1 {
     padding-bottom: 0;
     font-weight: bold;
     text-align: center;
 }
 
-.login-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    background-color: #bfcdbb;
-    border-radius: 2rem;
-    padding: 2rem 5rem;
-    align-items: center;
-}
-
-.login-form input {
+.register-input {
     padding: 0.8rem;
     border:0.1rem solid #EFF4EE;
     border-radius: 0.4rem;
@@ -50,12 +45,7 @@
     width: 100%;
 }
 
-.login-form input:focus {
-    border: 0.1rem solid #849d42;
-    outline: none;
-}
-
-.loginButton {
+.registerButton {
     background-color: #3c6503;
     padding: 0.5rem 1rem;
     border: none;
@@ -72,25 +62,14 @@ button:hover {
     background-color:#849d42;
 }
 
-.login-span {
-    color: black;
+.register-span {
     text-align: center;
-    font-weight: bold;
     font-size: 16px;
+    font-weight: bold;
 }
 
-.login-link {
+.register-link {
     color: red;
     text-decoration: none;
     font-weight: bold;
-}
-
-@media screen and (max-width:414px){
-    .loginButton {
-        padding: 0.3rem 0.8rem;
-    }
-
-    .login-span {
-        font-size: 12px;
-    }
 }
