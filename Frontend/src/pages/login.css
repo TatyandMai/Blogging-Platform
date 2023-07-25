@@ -1,11 +1,11 @@
-container {
-    height: 100vh;
-    width: 100vw;
+ .login-container {
+    min-height: 100vh;
+    min-width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
-    background-color:  #bfcdbb;
+    background-color:  #DEE4DA;
     background-image: url(../assets/leaves-bottom.png), url(../assets/leaves-top.png);
     background-repeat: no-repeat, no-repeat;
     background-position: right bottom, left top;
@@ -16,26 +16,27 @@ container {
 .login {
     display: flex;
     align-items: center;
-    gap: 1rem;
     justify-content: center;
 }
 
-.login h1 {
-    color: black;
-    margin-bottom: 0px;
-}
-
-form {
+.login-container {
+    max-width: 80vw;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    background-color: #BBBBBB;
+    justify-content: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #bfcdbb;
     border-radius: 2rem;
     padding: 2rem 5rem;
     align-items: center;
 }
 
-form input {
+.login-form input {
     padding: 0.8rem;
     border:0.1rem solid #EFF4EE;
     border-radius: 0.4rem;
@@ -43,14 +44,14 @@ form input {
     width: 100%;
 }
 
-form input:focus {
+.login-form input:focus {
     border: 0.1rem solid #849d42;
     outline: none;
 }
 
 .loginButton {
     background-color: #3c6503;
-    padding: 1rem 2rem;
+    padding: 0.5rem 1rem;
     border: none;
     border-radius: 5px;
     text-transform: uppercase;
@@ -65,16 +66,25 @@ button:hover {
     background-color:#849d42;
 }
 
-span {
+.login-span {
     color: black;
     text-align: center;
+    font-weight: bold;
+    font-size: 16px;
 }
 
-link {
+.login-link {
     color: red;
     text-decoration: none;
     font-weight: bold;
 }
 
+@media screen and (max-width:414px){
+    .loginButton {
+        padding: 0.3rem 0.8rem;
+    }
 
-
+    .login-span {
+        font-size: 12px;
+    }
+}

@@ -2,15 +2,9 @@
     background-color: #E1E6E0;
     width: 100%;
     border-top: 2px solid black;
-
+    min-height: 100vh;
 }
 
 h1 {
     padding: 20px;
-}
-
-.articleList {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
 }
