@@ -21,7 +21,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use("/api/auth", authRoute); // Route for authentication (login, register)
 app.use("/api/posts", postRoute); // Route for post operations
 
-console.log("MONGO_URL:", process.env.MONGO_URL);
 
 // Connect to MongoDB
 mongoose
