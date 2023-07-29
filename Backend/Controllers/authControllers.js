@@ -1,4 +1,5 @@
 const Users = require("../Models/User");
+const bcrypt = require('bcrypt');
 const { hashPassword } = require('../Helper/userHelper');
 
 //Register
