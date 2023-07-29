@@ -2,15 +2,15 @@ const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const bodyParser = require("body-parser");
-
+const cors = require('cors');
 require('dotenv').config({ debug: true });
 
 
 dotenv.config();
 
 const app = express();
+app.use(cors());
 
-require("dotenv").config();
 
 const authRoute = require("./Routes/authRoutes");
 const postRoute = require("./Routes/postRoutes"); // Import the post routes
@@ -35,6 +35,6 @@ mongoose
     console.log(error);
   });
 
-app.listen(6000, () => {
+app.listen(4000, () => {
   console.log("Server is running");
 });

@@ -96,10 +96,6 @@ return (
                 Don't have an account? <Link className="login-link" to="/register"> Register</Link>
             </span>
             
-            {/* Show user profile image if available */}
-            {data && data.user && data.user.profileImage && (
-            <img className="user-profile-image" src={data.user.profileImage} alt="User Profile" />
-            )}
 
         </form>
         <ToastContainer />
