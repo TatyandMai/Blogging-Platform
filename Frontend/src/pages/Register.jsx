@@ -80,7 +80,7 @@ function Register() {
 
 return (
     <div>
-        <container className='register-container'>
+        <div className='register-container'>
             <form action='' className='register-form' onSubmit={(event)=> handleSubmit(event)}>
                 <div className='register'>
                     <h1>Register</h1>
@@ -120,7 +120,7 @@ return (
                 </span>
             </form>
             <ToastContainer />
-        </container>
+        </div>
     </div>
 )
 }
