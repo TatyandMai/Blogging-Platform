@@ -14,12 +14,14 @@ app.use(cors());
 
 const authRoute = require("./Routes/authRoutes");
 const postRoute = require("./Routes/postRoutes"); // Import the post routes
+const userRoute = require("./Routes/userRoutes");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use("/api/auth", authRoute); // Route for authentication (login, register)
 app.use("/api/posts", postRoute); // Route for post operations
+app.use("/api/users", userRoute); // Route for user operations
 
 
 // Connect to MongoDB
