@@ -1,11 +1,10 @@
-
 const PostModel = require("../Models/Post");
 const Post = require("../Models/Post");
 const User = require("../Models/User");
 
 
 // Controller to create a new post
-exports.createPost = async (req, res) => {
+const createPost = async (req, res) => {
   try {
     const { userId, title, description } = req.body;
     const newPost = await PostModel.create({ userId, title, description });
@@ -16,7 +15,7 @@ exports.createPost = async (req, res) => {
 };
 
 // //create a new post
-// exports.createPost = async (req, res) => {
+// const createPost = async (req, res) => {
 //   const newPost = new Post(req.body);
 //   try{
 //       const savedPost = await newPost.save();
@@ -28,7 +27,7 @@ exports.createPost = async (req, res) => {
 
 
 //update a post
-exports.updatePost = async(req, res) => { //id = post id
+const updatePost = async(req, res) => { //id = post id
   try{
       const post = await Post.findById(req.params.id);
       if(post.userId === req.body.userId){
@@ -44,7 +43,7 @@ exports.updatePost = async(req, res) => { //id = post id
 
 
 // Controller to delete a post by its ID
-exports.deletePost = async (req, res) => {
+const deletePost = async (req, res) => {
   try {
     const postId = req.params.postId;
     const deletedPost = await PostModel.findByIdAndDelete(postId);
@@ -58,7 +57,7 @@ exports.deletePost = async (req, res) => {
 };
 
 // //delete a post
-// exports.deletePost = async(req, res) => {
+// const deletePost = async(req, res) => {
 //   try{
 //       const post = await Post.findById(req.params.id);
 //       if(post.userId === req.body.userId){
@@ -74,7 +73,7 @@ exports.deletePost = async (req, res) => {
 
 
 // Controller to get a post by its ID
-exports.getPost = async (req, res) => {
+const getPost = async (req, res) => {
   try {
     const postId = req.params.postId;
     const post = await PostModel.findById(postId);
@@ -89,7 +88,7 @@ exports.getPost = async (req, res) => {
 
 
 //like or dislike a post
-exports.likeAndDislike = async(req, res) => { //id = post id
+const likeAndDislike = async(req, res) => { //id = post id
   try{
       const post = await Post.findById(req.params.id);
       //like
@@ -105,18 +104,8 @@ exports.likeAndDislike = async(req, res) => { //id = post id
   }
 }
 
-//get a post
-exports.getOnePost = async (req, res) => { //id = post id
-  try{
-      const post = await Post.findById(req.params.id); //post id
-      res.status(200).json(post);
-  }catch(err){
-      res.status(500).json(err);
-  }
-}
-
 //get all posts
-exports.getAllPosts = async(req, res) =>{
+const getAllPosts = async(req, res) =>{
   try{
       const allPosts = await Post.find({});
       res.status(200).json(allPosts);
@@ -126,7 +115,7 @@ exports.getAllPosts = async(req, res) =>{
 }
 
 //get only all of my posts
-exports.getAllMyPosts =  async(req, res) =>{
+const getAllMyPosts =  async(req, res) =>{
   try{
       //get all posts
       const allPosts = await Post.find({});
@@ -143,7 +132,7 @@ exports.getAllMyPosts =  async(req, res) =>{
 }
 
 //get all of my posts(profile page)
-getAllMyPostsProfile = async (req, res) => {
+const getAllMyPostsProfile = async (req, res) => {
   try{
       const user = await User.findOne({ username:req.params.username }); //1つのユーザー名から探すのでfindOne. findOneはプロパティが必要なのでusername:で指定
       const posts = await Post.find({ userId: user._id });
@@ -154,7 +143,7 @@ getAllMyPostsProfile = async (req, res) => {
 }
 
 //get all of following people's posts and my posts
-getMyAndFollowersPosts = async (req, res) => {
+const getMyAndFollowersPosts = async (req, res) => {
   try{
       const currentUser = await User.findById(req.params.userId);
       const userPosts = await Post.find({ userId: currentUser._id });
@@ -169,3 +158,5 @@ getMyAndFollowersPosts = async (req, res) => {
       return res.status(500).json(err);
   }
 }
+
+module.exports = { likeAndDislike, getAllPosts, getAllMyPosts, getAllMyPostsProfile, getMyAndFollowersPosts, createPost, deletePost, getPost, updatePost,};
