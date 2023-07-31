@@ -5,16 +5,19 @@ const PostSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    title: {
-        type: String,
-        max: 100
-    },
-    description: {
+    desc: {
         type: String,
         max: 200
+    },
+    img: {
+        type: String,
+    },
+    likes: {
+        type: Array,
+        default: [],
     },
 },
     {timeStamps: true}
 );
 
-module.exports = mongoose.model("Post", PostSchema);
+module.exports = mongoose.model("Post", PostSchema); //export PostSchema as "Post"
