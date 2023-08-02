@@ -76,6 +76,15 @@ function Profile() {
               ))}
             </Row>
         </div>
+        {/* <div className="comments-section"> */}
+          {/* Display all posts */}
+          {/* {posts.map((post) => (
+            <div key={post._id}>
+              <h2>{post.title}</h2>
+              <p>{post.description}</p>
+            </div>
+          ))}
+        </div> */}
       </div>
     </div>
   )
