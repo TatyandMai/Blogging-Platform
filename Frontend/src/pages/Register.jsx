@@ -68,7 +68,7 @@ function Register() {
             }
             if(data.status === true){
                 localStorage.setItem("bloggingPlatform-user", JSON.stringify(data.user))
-                navigate("/");
+                navigate("/login");
             }
         }
     };
