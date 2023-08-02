@@ -27,7 +27,7 @@ function Login() {
     //user can't go to login page after user logged in
     useEffect (()=>{
         if(!localStorage.getItem("bloggingPlatform-user")){
-            navigate("/");
+            navigate("/profile");
         }
         // eslint-disable-next-line
     }, []);
