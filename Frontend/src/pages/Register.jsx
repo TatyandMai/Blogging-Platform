@@ -29,8 +29,8 @@ function Register() {
 
     //user can't go to register page after user logged in
     useEffect (()=>{
-        if(!localStorage.getItem("bloggingPlatform-user")){
-            navigate("/");
+        if(localStorage.getItem("bloggingPlatform-user")){
+            navigate("/profile");
         }
         // eslint-disable-next-line
     }, []);
