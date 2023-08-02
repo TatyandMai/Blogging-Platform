@@ -1,20 +1,6 @@
-/* Estilos para el contenedor principal */
-.container {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centrar elementos verticalmente */
-  align-items: center; /* Centrar elementos horizontalmente */
-  background-color: #bfcdbb; /* Color de fondo del contenedor principal */
-}
-
 /* Estilos para la decoración de la parte de afuera del contenedor */
 .post {
+  max-width: 100vw;
   background-color: #E1E6E0;
   background-image: url(../assets/leaves-bottom.png), url(../assets/leaves-top.png);
   background-repeat: no-repeat, no-repeat;
@@ -28,61 +14,51 @@
   min-height: 100vh; /* Altura mínima del body para centrar el contenido */
 }
 
+.post-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 /* Estilos para el componente UserImage */
 .user-profile {
-  text-align: center;
   margin-bottom: 20px;
-  position: relative;
   display: flex;
   justify-content: center; /* Centrar elementos horizontalmente */
   align-items: center; /* Centrar elementos verticalmente */
 }
 
 .user-profile img {
-  width: 200px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  position: absolute;
+  background-color: white;
 }
-
 
 /* Estilos para el componente PostBox */
-.post-box {
-  background-color: #ffffff;
+.post-form {
+  width: 400px;
   padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: center; /* Centrar elementos verticalmente */
   align-items: center; /* Centrar elementos horizontalmente */
+  background-color: #bfcdbb; /* Color de fondo del contenedor principal */
 }
 
-.post-box input,
-.post-box textarea {
+.post-title {
+  background-color: #E1E6E0;
+}
+
+.post-title,
+.post-description {
   width: 100%;
-  margin-bottom: 10px;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   border-radius: 5px;
-}
-
-.upload-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-
-.upload-buttons label {
-  background-color: #849d42;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-right: 10px;
-}
-
-.upload-buttons input[type="file"] {
-  display: none;
 }
 
 .post-button {
@@ -95,16 +71,33 @@
   margin-top: 10px; /* Agregar margen superior para centrar el botón */
 }
 
-/* Estilos para el componente CommentsSection */
-.comments-section {
-  border-top: 1px solid #ccc;
-  padding-top: 20px;
-}
+@media screen and (max-width:414px){
+  .user-profile img {
+    width: 70px;
+    height: 70px;
+  }
 
-/* Estilos adicionales para los comentarios si los agregas con JavaScript */
-.comment {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 10px;
-}
+  .user-profile h5 {
+    font-size: 18px;
+  }
 
+  .post-form {
+    max-width: 330px;
+    max-height: 300px;
+  }
+
+  .post-button {
+    padding: 10px 20px;
+  }
+
+  .post-description,
+  .post-title {
+    width: 90%;
+    padding: 5px;
+  }
+
+  .post-file {
+    width: 30%;
+    font-size: 10px;
+  }
+}
