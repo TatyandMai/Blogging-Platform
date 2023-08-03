@@ -1,6 +1,5 @@
 import React from 'react';
 import './post.css';
-
 function Post() {
   return (
     <div className="post">
@@ -26,7 +25,6 @@ function Post() {
       </div>
     </div>
   );
-};
+}
 
 export default Post;
-
