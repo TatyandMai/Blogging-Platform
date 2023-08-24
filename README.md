@@ -37,3 +37,17 @@ Peaple who want to share their information, opinions, thoughts and pictures.
 
 
 # REFERENCES
+Pinterest<br>
+https://www.pinterest.ca/<br>
+
+Unsplash<br>
+https://unsplash.com/<br>
+
+Color-picker<br>
+https://imagecolorpicker.com/<br>
+
+Material-Icons<br>
+https://mui.com/material-ui/material-icons/<br>
+
+React-bootstrap<br>
+https://react-bootstrap.netlify.app/<br>
